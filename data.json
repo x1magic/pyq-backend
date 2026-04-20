@@ -824,5 +824,99 @@
         ],
         "year": 2025,
         "file": "ce803-2025.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-101",
+        "subject_name": "Engineering Chemistry",
+        "keywords": [
+            "chemistry",
+            "engineering chemistry",
+            "chem"
+        ],
+        "year": 2023,
+        "file": "bt101-2023.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-101",
+        "subject_name": "Engineering Chemistry",
+        "keywords": [
+            "chemistry",
+            "engineering chemistry",
+            "chem"
+        ],
+        "year": 2024,
+        "file": "bt101-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-102",
+        "subject_name": "Mathematics 2",
+        "keywords": [
+            "math",
+            "maths",
+            "engineering mathematics"
+        ],
+        "year": 2024,
+        "file": "bt102-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-103",
+        "subject_name": "English",
+        "keywords": [
+            "english",
+            "communication"
+        ],
+        "year": 2024,
+        "file": "bt103-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-105",
+        "subject_name": "Engineering Graphics",
+        "keywords": [
+            "graphics",
+            "engineering drawing"
+        ],
+        "year": 2023,
+        "file": "bt105-2023.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-105",
+        "subject_name": "Engineering Graphics",
+        "keywords": [
+            "graphics",
+            "engineering drawing"
+        ],
+        "year": 2024,
+        "file": "bt105-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-201",
+        "subject_name": "Engineering Physics",
+        "keywords": [
+            "physics",
+            "engineering physics"
+        ],
+        "year": 2023,
+        "file": "bt201-2023.pdf"
     }
 ]
