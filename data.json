@@ -918,5 +918,401 @@
         ],
         "year": 2023,
         "file": "bt201-2023.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-101",
+        "subject_name": "Engineering Chemistry",
+        "keywords": [
+            "chemistry",
+            "engineering chemistry",
+            "chem"
+        ],
+        "year": 2024,
+        "file": "bt101-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-102",
+        "subject_name": "Engineering Mathematics-I",
+        "keywords": [
+            "maths",
+            "engineering mathematics"
+        ],
+        "year": 2024,
+        "file": "bt102-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-103",
+        "subject_name": "English For Communication",
+        "keywords": [
+            "english",
+            "communication"
+        ],
+        "year": 2024,
+        "file": "bt103-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-104",
+        "subject_name": "Basic Electrical Engineering",
+        "keywords": [
+            "electrical",
+            "bee"
+        ],
+        "year": 2024,
+        "file": "bt104-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-105",
+        "subject_name": "Engineering Graphics",
+        "keywords": [
+            "graphics",
+            "drawing"
+        ],
+        "year": 2024,
+        "file": "bt105-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-201",
+        "subject_name": "Engineering Physics",
+        "keywords": [
+            "physics",
+            "engineering physics"
+        ],
+        "year": 2024,
+        "file": "bt201-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-202",
+        "subject_name": "Mathematics-II",
+        "keywords": [
+            "maths",
+            "engineering mathematics"
+        ],
+        "year": 2024,
+        "file": "bt202-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-203",
+        "subject_name": "Basic Mechanical Engineering",
+        "keywords": [
+            "mechanical",
+            "bme"
+        ],
+        "year": 2024,
+        "file": "bt203-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-204",
+        "subject_name": "Basic Civil Engineering & Mechanics",
+        "keywords": [
+            "civil",
+            "mechanics",
+            "bce"
+        ],
+        "year": 2024,
+        "file": "bt204-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-205",
+        "subject_name": "Basic Computer Engineering",
+        "keywords": [
+            "computer",
+            "bce"
+        ],
+        "year": 2024,
+        "file": "bt205-2024.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-101",
+        "subject_name": "Engineering Chemistry",
+        "keywords": [
+            "chemistry",
+            "engineering chemistry",
+            "chem"
+        ],
+        "year": 2023,
+        "file": "bt101-2023.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-102",
+        "subject_name": "Engineering Mathematics-I",
+        "keywords": [
+            "maths",
+            "engineering mathematics"
+        ],
+        "year": 2023,
+        "file": "bt102-2023.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-103",
+        "subject_name": "English For Communication",
+        "keywords": [
+            "english",
+            "communication"
+        ],
+        "year": 2023,
+        "file": "bt103-2023.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-104",
+        "subject_name": "Basic Electrical Engineering",
+        "keywords": [
+            "electrical",
+            "bee"
+        ],
+        "year": 2023,
+        "file": "bt104-2023.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-105",
+        "subject_name": "Engineering Graphics",
+        "keywords": [
+            "graphics",
+            "drawing"
+        ],
+        "year": 2023,
+        "file": "bt105-2023.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-201",
+        "subject_name": "Engineering Physics",
+        "keywords": [
+            "physics",
+            "engineering physics"
+        ],
+        "year": 2023,
+        "file": "bt201-2023.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-202",
+        "subject_name": "Mathematics-II",
+        "keywords": [
+            "maths",
+            "engineering mathematics"
+        ],
+        "year": 2023,
+        "file": "bt202-2023.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-203",
+        "subject_name": "Basic Mechanical Engineering",
+        "keywords": [
+            "mechanical",
+            "bme"
+        ],
+        "year": 2023,
+        "file": "bt203-2023.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-204",
+        "subject_name": "Basic Civil Engineering & Mechanics",
+        "keywords": [
+            "civil",
+            "mechanics",
+            "bce"
+        ],
+        "year": 2023,
+        "file": "bt204-2023.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-205",
+        "subject_name": "Basic Computer Engineering",
+        "keywords": [
+            "computer",
+            "bce"
+        ],
+        "year": 2023,
+        "file": "bt205-2023.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-101",
+        "subject_name": "Engineering Chemistry",
+        "keywords": [
+            "chemistry",
+            "engineering chemistry",
+            "chem"
+        ],
+        "year": 2022,
+        "file": "bt101-2022.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-102",
+        "subject_name": "Mathematics-I",
+        "keywords": [
+            "maths",
+            "engineering mathematics"
+        ],
+        "year": 2022,
+        "file": "bt102-2022.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-103",
+        "subject_name": "English For Communication",
+        "keywords": [
+            "english",
+            "communication"
+        ],
+        "year": 2022,
+        "file": "bt103-2022.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-104",
+        "subject_name": "Basic Electrical Engineering",
+        "keywords": [
+            "electrical",
+            "bee"
+        ],
+        "year": 2022,
+        "file": "bt104-2022.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 1,
+        "subject_code": "BT-105",
+        "subject_name": "Engineering Graphics",
+        "keywords": [
+            "graphics",
+            "drawing"
+        ],
+        "year": 2022,
+        "file": "bt105-2022.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-201",
+        "subject_name": "Engineering Physics",
+        "keywords": [
+            "physics",
+            "engineering physics"
+        ],
+        "year": 2022,
+        "file": "bt201-2022.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-202",
+        "subject_name": "Mathematics-II",
+        "keywords": [
+            "maths",
+            "engineering mathematics"
+        ],
+        "year": 2022,
+        "file": "bt202-2022.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-203",
+        "subject_name": "Basic Mechanical Engineering",
+        "keywords": [
+            "mechanical",
+            "bme"
+        ],
+        "year": 2022,
+        "file": "bt203-2022.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-204",
+        "subject_name": "Basic Civil Engineering & Mechanics",
+        "keywords": [
+            "civil",
+            "mechanics",
+            "bce"
+        ],
+        "year": 2022,
+        "file": "bt204-2022.pdf"
+    },
+    {
+        "course": "B.Tech",
+        "branch": "IT",
+        "semester": 2,
+        "subject_code": "BT-205",
+        "subject_name": "Basic Computer Engineering",
+        "keywords": [
+            "computer",
+            "bce"
+        ],
+        "year": 2022,
+        "file": "bt205-2022.pdf"
     }
 ]
