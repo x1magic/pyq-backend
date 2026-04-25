@@ -94,31 +94,21 @@ app.get("/search/davv", (req, res) => {
     const q = (req.query.q || "").toLowerCase().trim();
 
     const result = davvData.filter(item => {
-        return (
-            // name
-            item.name?.toLowerCase().includes(q) ||
+        // सब data को एक string में flatten कर दो
+        const fullText = [
+            item.name,
+            item.subject_name,
+            item.student_year,
+            item.paper_year,
+            ...(item.course || []),
+            ...(item.exam_month || []),
+            ...(item.keywords || []),
+            ...(item.tags || [])
+        ]
+            .join(" ")
+            .toLowerCase();
 
-            // subject
-            item.subject_name?.toLowerCase().includes(q) ||
-
-            // course array
-            item.course?.some(c => c.toLowerCase().includes(q)) ||
-
-            // student year
-            item.student_year?.toLowerCase().includes(q) ||
-
-            // paper year
-            String(item.paper_year).includes(q) ||
-
-            // exam month
-            item.exam_month?.some(m => m.toLowerCase().includes(q)) ||
-
-            // keywords
-            item.keywords?.some(k => k.toLowerCase().includes(q)) ||
-
-            // tags
-            item.tags?.some(t => t.toLowerCase().includes(q))
-        );
+        return fullText.includes(q);
     });
 
     res.json(result);
