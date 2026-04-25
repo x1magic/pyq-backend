@@ -38,11 +38,11 @@ app.get("/pdf/:uni/:filename", async (req, res) => {
                 Authorization: `token ${process.env.GITHUB_TOKEN}`,
                 Accept: "application/vnd.github.v3.raw"
             },
-            responseType: "stream"
+            responseType: "arraybuffer"
         });
 
         res.setHeader("Content-Type", "application/pdf");
-        response.data.pipe(res);
+        res.send(response.data);
 
     } catch (err) {
         console.error("Error:", err.message);
