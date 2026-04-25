@@ -6,13 +6,20 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
-// ✅ Home route (Cannot GET fix)
+// ✅ JSON data load
+const rgpvData = require("./data/rgpv.json");
+const davvData = require("./data/davv.json");
+
+// ✅ Home route
 app.get("/", (req, res) => {
     res.send("Backend is running 🚀");
 });
 
-// ✅ PDF route
-app.get("/pdf/:filename", async (req, res) => {
+
+// =======================
+// 📄 PDF FETCH (GitHub)
+// =======================
+app.get("/pdf/:uni/:filename", async (req, res) => {
     try {
         const auth = req.headers.authorization;
 
@@ -21,9 +28,10 @@ app.get("/pdf/:filename", async (req, res) => {
             return res.status(401).send("Unauthorized");
         }
 
-        const fileName = req.params.filename;
+        const { uni, filename } = req.params;
 
-        const url = `https://api.github.com/repos/${process.env.REPO_OWNER}/${process.env.REPO_NAME}/contents/pdfs/${fileName}`;
+        // 👉 uni = rgpv या davv
+        const url = `https://api.github.com/repos/${process.env.REPO_OWNER}/${process.env.REPO_NAME}/contents/pdfs/${uni}/${filename}`;
 
         const response = await axios.get(url, {
             headers: {
@@ -33,14 +41,12 @@ app.get("/pdf/:filename", async (req, res) => {
             responseType: "stream"
         });
 
-        // 📄 Send PDF
         res.setHeader("Content-Type", "application/pdf");
         response.data.pipe(res);
 
     } catch (err) {
         console.error("Error:", err.message);
 
-        // Better error message
         if (err.response?.status === 404) {
             return res.status(404).send("File not found");
         }
@@ -49,7 +55,62 @@ app.get("/pdf/:filename", async (req, res) => {
     }
 });
 
+
+// =======================
+// 📚 DATA ROUTES
+// =======================
+
+// RGPV
+app.get("/rgpv", (req, res) => {
+    res.json(rgpvData);
+});
+
+// DAVV
+app.get("/davv", (req, res) => {
+    res.json(davvData);
+});
+
+
+// =======================
+// 🔍 SEARCH ROUTES
+// =======================
+
+// RGPV Search
+app.get("/search/rgpv", (req, res) => {
+    const q = (req.query.q || "").toLowerCase();
+
+    const result = rgpvData.filter(item =>
+        item.subject_name.toLowerCase().includes(q) ||
+        item.subject_code.toLowerCase().includes(q) ||
+        item.keywords.some(k => k.toLowerCase().includes(q))
+    );
+
+    res.json(result);
+});
+
+
+// DAVV Search (student_year + paper_year support)
+app.get("/search/davv", (req, res) => {
+    const q = (req.query.q || "").toLowerCase();
+    const studentYear = req.query.student_year;
+    const paperYear = req.query.paper_year;
+
+    const result = davvData.filter(item =>
+        (
+            item.subject_name.toLowerCase().includes(q) ||
+            item.subject_code.toLowerCase().includes(q) ||
+            item.keywords.some(k => k.toLowerCase().includes(q)) ||
+            (item.tags || []).some(t => t.toLowerCase().includes(q))
+        ) &&
+        (!studentYear || item.student_year == studentYear) &&
+        (!paperYear || item.paper_year == paperYear)
+    );
+
+    res.json(result);
+});
+
+
 // ▶️ Start server
 app.listen(process.env.PORT || 5000, () => {
     console.log("Server running...");
-});
+});s
