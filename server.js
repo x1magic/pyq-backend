@@ -80,19 +80,23 @@ app.get("/search/rgpv", (req, res) => {
     const q = (req.query.q || "").toLowerCase().trim();
 
     const result = rgpvData.filter(item => {
-        return (
-            (item.subject_name || "").toLowerCase().includes(q) ||
-            (item.subject_code || "").toLowerCase().includes(q) ||
-            (item.branch || "").toLowerCase().includes(q) ||
-            (item.course || "").toLowerCase().includes(q) ||
-            String(item.year || "").includes(q) ||
-            (item.keywords || []).some(k => k.toLowerCase().includes(q))
-        );
+        const text = [
+            item.subject_name,
+            item.subject_code,
+            item.branch,
+            item.course,
+            item.year,
+            ...(item.keywords || [])
+        ]
+            .filter(Boolean) // null/undefined हटाए
+            .join(" ")
+            .toLowerCase();
+
+        return text.includes(q);
     });
 
     res.json(result);
 });
-
 
 // DAVV Search (student_year + paper_year support)
 app.get("/search/davv", (req, res) => {
