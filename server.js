@@ -91,20 +91,35 @@ app.get("/search/rgpv", (req, res) => {
 
 // DAVV Search (student_year + paper_year support)
 app.get("/search/davv", (req, res) => {
-    const q = (req.query.q || "").toLowerCase();
-    const studentYear = req.query.student_year;
-    const paperYear = req.query.paper_year;
+    const q = (req.query.q || "").toLowerCase().trim();
 
-    const result = davvData.filter(item =>
-        (
-            item.subject_name.toLowerCase().includes(q) ||
-            item.subject_code.toLowerCase().includes(q) ||
-            item.keywords.some(k => k.toLowerCase().includes(q)) ||
-            (item.tags || []).some(t => t.toLowerCase().includes(q))
-        ) &&
-        (!studentYear || item.student_year == studentYear) &&
-        (!paperYear || item.paper_year == paperYear)
-    );
+    const result = davvData.filter(item => {
+        return (
+            // name
+            item.name?.toLowerCase().includes(q) ||
+
+            // subject
+            item.subject_name?.toLowerCase().includes(q) ||
+
+            // course array
+            item.course?.some(c => c.toLowerCase().includes(q)) ||
+
+            // student year
+            item.student_year?.toLowerCase().includes(q) ||
+
+            // paper year
+            String(item.paper_year).includes(q) ||
+
+            // exam month
+            item.exam_month?.some(m => m.toLowerCase().includes(q)) ||
+
+            // keywords
+            item.keywords?.some(k => k.toLowerCase().includes(q)) ||
+
+            // tags
+            item.tags?.some(t => t.toLowerCase().includes(q))
+        );
+    });
 
     res.json(result);
 });
