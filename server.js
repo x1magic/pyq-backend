@@ -77,13 +77,18 @@ app.get("/davv", (req, res) => {
 
 // RGPV Search
 app.get("/search/rgpv", (req, res) => {
-    const q = (req.query.q || "").toLowerCase();
+    const q = (req.query.q || "").toLowerCase().trim();
 
-    const result = rgpvData.filter(item =>
-        item.subject_name.toLowerCase().includes(q) ||
-        item.subject_code.toLowerCase().includes(q) ||
-        item.keywords.some(k => k.toLowerCase().includes(q))
-    );
+    const result = rgpvData.filter(item => {
+        return (
+            (item.subject_name || "").toLowerCase().includes(q) ||
+            (item.subject_code || "").toLowerCase().includes(q) ||
+            (item.branch || "").toLowerCase().includes(q) ||
+            (item.course || "").toLowerCase().includes(q) ||
+            String(item.year || "").includes(q) ||
+            (item.keywords || []).some(k => k.toLowerCase().includes(q))
+        );
+    });
 
     res.json(result);
 });
